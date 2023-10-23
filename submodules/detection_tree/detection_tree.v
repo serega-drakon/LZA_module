@@ -26,7 +26,9 @@ module detection_tree#(
         .string_z_pos   (string_z_pos),
         .string_p_pos   (string_p_pos),
         .N_pos          (N_pos),
-        .Y_pos          (Y_pos)
+        .Y_pos          (Y_pos),
+        .P_pos          (),
+        .Z_pos          ()
     );
 
     DT_node_neg_rec #(
@@ -36,7 +38,9 @@ module detection_tree#(
         .string_z_neg   (string_z_neg),
         .string_p_neg   (string_p_neg),
         .P_neg          (P_neg),
-        .Y_neg          (Y_neg)
+        .Y_neg          (Y_neg),
+        .N_neg          (),
+        .Z_neg          ()
     );
 
     wire nshift_correct_pos = Y_pos & ~N_pos;
